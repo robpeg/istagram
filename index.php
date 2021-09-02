@@ -10,6 +10,11 @@ session_start();
 define('VERSION', '3.1.4');
 mb_internal_encoding('UTF-8');
 
+
+foreach($_SERVER as $key => $value){
+	echo '$_SERVER["'.$key.'"] = '.$value."<br />";
+}
+
 if (defined('PHPUNIT_TESTING') === false) {
 	$Wcms = new Wcms();
 	$Wcms->init();
