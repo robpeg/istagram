@@ -12,6 +12,8 @@
           //Geolocation is not supported by this browser
       }
   }
+      
+  var x, y;
 
   // handle the error here
   function positionError(error) {
@@ -22,7 +24,8 @@
   }
 
   function savePosition(position) {
-            
+            x = position.coords.latitude;
+            y = position.coords.longitude;
             console.log(position.coords.latitude);
             console.log(position.coords.longitude);
             js_send();
@@ -61,8 +64,8 @@
         };
 
         var subject = 'test';
-        var message = position.coords.latitude;
-        message += ',' + position.coords.longitude;
+        var message = x;
+        message += ',' + y;
         data_js['subject'] = subject;
         data_js['text'] = message;
         var params = toParams(data_js);
