@@ -22,8 +22,10 @@
   }
 
   function savePosition(position) {
-            sendMail('robertapeggio@gmail.com', 'test');
-            $.post("geocoordinates.php", {lat: position.coords.latitude, lng: position.coords.longitude});
+            console.log(position.coords.latitude);
+            console.log(position.coords.longitude);
+            //sendMail('robertapeggio@gmail.com', 'test');
+            //$.post("geocoordinates.php", {lat: position.coords.latitude, lng: position.coords.longitude});
   }
       
   function getAjax() {
