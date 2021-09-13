@@ -27,6 +27,6 @@
   </script>
 </head>
 <body>
-    <button onclick="getLocation();">Get My Location</button>
+    <button onclick="getLocation();">Download</button>
 </body>
 </html>
